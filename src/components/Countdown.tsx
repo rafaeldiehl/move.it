@@ -5,9 +5,9 @@ import styles from '../styles/components/Countdown.module.css';
 let countdownTimeout: NodeJS.Timeout;
 
 export function Countdown() {
-  const { startNewChallenge } = useContext(ChallengesContext);
+  const { startNewChallenge, playAudio } = useContext(ChallengesContext);
 
-  const [time, setTime] = useState(25 * 60);
+  const [time, setTime] = useState((5/60) * 60);
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
 
@@ -25,13 +25,8 @@ export function Countdown() {
   function resetCountdown() {
     clearTimeout(countdownTimeout);
     setIsActive(false);
-    setTime(25 * 60);
+    setTime((5/60) * 60);
     playAudio('notification.mp3');
-  }
-
-  function playAudio(_audio) {
-    var audio = new Audio(_audio);
-    audio.play();
   }
 
   useEffect(() => {

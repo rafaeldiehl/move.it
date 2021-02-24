@@ -22,3 +22,22 @@
     margin-bottom: -3rem;
   }
 }
+
+@media (max-width: 750px) {
+  .container section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .container section > div {
+    width: 70vw;
+    min-width: 300px;
+  }
+
+  .container section > div:last-child {
+    margin-bottom: 3rem;
+  }
+}
