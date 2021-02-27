@@ -4,7 +4,7 @@ import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
-  const { activeChallenge, resetChallenge, playAudio } = useContext(ChallengesContext);
+  const { activeChallenge, resetChallenge, playAudio, completedChallenge } = useContext(ChallengesContext);
 
   return (
     <div className={styles.challengeBoxContainer}>
@@ -22,20 +22,14 @@ export function ChallengeBox() {
             <button 
               type="button"
               className={styles.challengeFailedButton}
-              onClick={() => {
-                resetChallenge();
-                playAudio('fail.mp3');
-              }}
+              onClick={resetChallenge}
             >
               Falhei
             </button>
             <button 
               type="button"
               className={styles.challengeSucceededButton}
-              onClick={() => {
-                playAudio('success.mp3');
-                resetChallenge();
-              }}
+              onClick={completedChallenge}
             >
               Completei
             </button>

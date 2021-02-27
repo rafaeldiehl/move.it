@@ -19,14 +19,12 @@ export function Countdown() {
 
   function startCountdown() {
     setIsActive(true);
-    playAudio('notification.mp3');
   }
 
   function resetCountdown() {
     clearTimeout(countdownTimeout);
     setIsActive(false);
     setTime((5/60) * 60);
-    playAudio('notification.mp3');
   }
 
   useEffect(() => {
@@ -37,7 +35,7 @@ export function Countdown() {
     } else if (isActive && time == 0) {
       setHasFinished(true);
       setIsActive(false);
-      playAudio('alarm.mp3');
+      playAudio('notification.mp3');
       startNewChallenge();
     }
   }, [isActive, time]);

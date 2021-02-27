@@ -16,7 +16,8 @@ interface ChallengesContextData {
   startNewChallenge: () => void;
   activeChallenge: Challenge;
   resetChallenge: () => void;
-  playAudio: (_audio) => void;
+  completedChallenge: () => void;
+  playAudio: (_audio: string) => void;
 }
 
 interface ChallengesProviderProps {
@@ -27,10 +28,10 @@ export const ChallengesContext = createContext({} as ChallengesContextData);
 
 export function ChallengesProvider({ children }: ChallengesProviderProps) {
   const [level, setLevel] = useState(1);
-  const [currentExperience, setCurrentExperience] = useState(32);
+  const [currentExperience, setCurrentExperience] = useState(0);
   const [challengesCompleted, setChallengesCompleted] = useState(0);
 
-  const [activeChallenge, setactiveChallenge] = useState(null);
+  const [activeChallenge, setActiveChallenge] = useState(null);
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
@@ -42,11 +43,30 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
     const challenge = challenges[randomChallengeIndex];
 
-    setactiveChallenge(challenge);
+    setActiveChallenge(challenge);
   }
 
   function resetChallenge() {
-    setactiveChallenge(null);
+    setActiveChallenge(null);
+  }
+
+  function completedChallenge() {
+    if (!activeChallenge) {
+      return;
+    }
+
+    const { amount } = activeChallenge;
+
+    let finalExperience = currentExperience + amount;
+
+    if (finalExperience > experienceToNextLevel) {
+      finalExperience = finalExperience - experienceToNextLevel;
+      levelUp();
+    }
+
+    setCurrentExperience(finalExperience);
+    setActiveChallenge(null);
+    setChallengesCompleted(challengesCompleted + 1);
   }
 
   function playAudio(_audio) {
@@ -64,6 +84,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
       startNewChallenge,
       activeChallenge,
       resetChallenge,
+      completedChallenge,
       playAudio
     }}>
       { children}
