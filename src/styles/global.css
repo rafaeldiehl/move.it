@@ -36,15 +36,15 @@
   }
 }
 
-@media(max-height: 650px) {
+@media(max-height: 750px) {
   html {
-    font-size: 93.75%;
+    font-size: 88.75%;
   }
 }
 
 @media(max-height: 600px) {
   html {
-    font-size: 85.75%;
+    font-size: 80.75%;
   }
 }
 

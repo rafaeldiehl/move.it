@@ -1,0 +1,133 @@
+.container {
+  background: var(--white);
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+}
+
+.container section header {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container section header img {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.container section div .link {
+  width: 7rem;
+  height: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.container section div .link svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+.container section div .active {
+  cursor: not-allowed;
+  position: relative;
+}
+
+.container section div .active:before {
+  content: '';
+  width: 0.3rem;
+  height: 3.75rem;
+  border-radius: 0 15px 15px 0;
+  background: var(--blue-dark);
+  position: absolute;
+  left: 0;
+}
+
+.container section div .active svg g {
+  opacity: 1;
+}
+
+.container section div .active svg path {
+  stroke: var(--blue-dark);
+}
+
+.container section div .link:hover > svg g {
+  opacity: 1;
+}
+
+.container section div .link:hover > svg path {
+  stroke: var(--blue-dark);
+}
+
+@media (max-width: 1000px) {
+  .container {
+    position: fixed;
+    background: var(--white);
+    width: 100%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .container section {
+    flex-direction: row;
+    height: 4rem;
+    width: 100vw;
+    align-items: center;
+    margin-top: 1rem;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .container section header {
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+ 
+  .container section div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container section div .link {
+    width: 7rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .container section div .link:first-child {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+
+  .container section div .active:before {
+    content: '';
+    height: 0.3rem;
+    width: 5rem;
+    border-radius: 0 15px 15px 0;
+    background: var(--blue-dark);
+    position: absolute;
+    left: auto;
+    bottom: 0;
+  }
+  
+}

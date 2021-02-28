@@ -1,8 +1,16 @@
+import { useRouter } from 'next/router';
+
 import Head from 'next/head';
 
 import styles from '../styles/pages/Login.module.css';
 
 export default function Login() {  
+  const router = useRouter();
+
+  function handleGoToUser() {
+    router.push('/')
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +27,7 @@ export default function Login() {
         </p>
         <form>
           <input required type="text" placeholder="Digite seu username"/>
-          <button type="submit"><img src="icons/login_arrow.svg" alt="Avançar"/></button>
+          <button type="submit" onClick={handleGoToUser}><img src="icons/login_arrow.svg" alt="Avançar"/></button>
         </form>
       </section>
     </div>
