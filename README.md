@@ -57,7 +57,7 @@
 
 <div id="como-usar">
   
-  <h2 align="center">🔎 Como usar</2>
+  <h2 align="center">🔎 Como usar</h2>
 
   É possível visualizar o projeto em produção pela Vercel, <a href="https://move-it-rust-xi.vercel.app">clicando aqui</a>. Porém, caso você queira instalar o projeto diretamente em sua máquina, siga as instruções abaixo.
   
