@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 
 import Head from 'next/head';
 
-import styles from '../styles/pages/Login.module.css';
+import { Container } from '../styles/pages/Login';
 
 export default function Login() {  
   const router = useRouter();
@@ -12,7 +12,7 @@ export default function Login() {
   }
 
   return (
-    <div className={styles.container}>
+    <Container>
       <Head>
           <title>Login | move.it</title>
       </Head>
@@ -30,6 +30,6 @@ export default function Login() {
           <button type="submit" onClick={handleGoToUser}><img src="icons/login_arrow.svg" alt="Avançar"/></button>
         </form>
       </section>
-    </div>
+    </Container>
   );
 }

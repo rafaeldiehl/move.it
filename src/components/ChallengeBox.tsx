@@ -2,16 +2,16 @@ import { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
 import { CountdownContext } from '../contexts/CountdownContext';
 
-import styles from '../styles/components/ChallengeBox.module.css';
+import * as S from '../styles/components/ChallengeBox';
 
 export function ChallengeBox() {
-  const { activeChallenge, resetChallenge, playAudio, completedChallenge } = useContext(ChallengesContext);
+  const { activeChallenge, resetChallenge, completedChallenge } = useContext(ChallengesContext);
   const { resetCountdown } = useContext(CountdownContext);
 
   return (
-    <div className={styles.challengeBoxContainer}>
+    <S.Container>
       { activeChallenge ? (
-        <div className={styles.challengeActive}>
+        <S.ChallengeActive>
           <header>Ganhe {activeChallenge.amount} xp</header>
 
           <main>
@@ -21,37 +21,35 @@ export function ChallengeBox() {
           </main>
 
           <footer>
-            <button 
+            <S.FailedButton 
               type="button"
-              className={styles.challengeFailedButton}
               onClick={() => {
                 resetChallenge(),
                 resetCountdown()
               }}
             >
               Falhei
-            </button>
-            <button 
+            </S.FailedButton>
+            <S.SucceededButton 
               type="button"
-              className={styles.challengeSucceededButton}
               onClick={() => {
                 completedChallenge(),
                 resetCountdown()
               }}
             >
               Completei
-            </button>
+            </S.SucceededButton>
           </footer>
-        </div>
+        </S.ChallengeActive>
       ) : (
-        <div className={styles.challengeNotActive}>
+        <S.ChallengeNotActive>
           <strong>Inicie um ciclo <br /> para receber desafios</strong>
           <p>
             <img src="icons/level-up.svg" alt="Level Up"/>
             Avance de level completando os desafios.
           </p>
-        </div>
+        </S.ChallengeNotActive>
       ) }
-    </div>
+    </S.Container>
   )
 }
