@@ -1,0 +1,85 @@
+.container {
+  background-color: var(--blue);
+  background-image: url('/icons/symbol.svg');
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: left center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12.5rem;
+  justify-content: space-evenly;
+  height: 27.5rem;
+}
+
+.container section > img {
+  width: 22.5rem;
+  margin-bottom: 2.75rem;
+}
+
+.container section strong {
+  font-size: 2.25rem;
+  color: var(--white);
+  font-weight: 500;
+  text-align: left;
+}
+
+.container section p {
+  font-size: 1.25rem;
+  color: var(--text-highlight);
+  display: flex;
+  flex-direction: row;
+}
+
+.container section p img {
+  margin-right: 1.5rem;
+}
+
+.container section form {
+  height: 4.75rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.container section form input {
+  background: linear-gradient(to right, #4953B8, rgba(73,83,184, 20%));
+  border: none;
+  color: var(--white);
+  font-size: 1.25rem;
+  height: 100%;
+  padding: 0 1.5rem;
+}
+
+.container section form input::placeholder {
+  color: var(--text-highlight);
+}
+
+.container section form button {
+  height: 100%;
+  border: none;
+  font-size: 0px;
+  width: 4.75rem;
+  background: var(--blue-dark);
+  transition: background .2s;
+}
+
+.container section form input:valid ~ button {
+  background: var(--green);
+}
+
+@media (max-width: 1050px) {
+  .container {
+    background-image: none;
+    justify-content: center;
+  }
+
+  .container section {
+    padding: 0;
+  }
+}

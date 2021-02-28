@@ -30,6 +30,12 @@
   }
 }
 
+@media (max-width: 425px) {
+  html {
+    font-size: 70%;
+  }
+}
+
 @media(max-height: 650px) {
   html {
     font-size: 93.75%;
