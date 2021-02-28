@@ -35,10 +35,16 @@
   color: var(--text-highlight);
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .container section p img {
   margin-right: 1.5rem;
+}
+
+.container section p span {
+  width: 250px;
+  line-height: 2rem;
 }
 
 .container section form {
@@ -75,11 +81,61 @@
 
 @media (max-width: 1050px) {
   .container {
-    background-image: none;
+    background-size: 100%;
+    background-position: top center;
     justify-content: center;
   }
 
   .container section {
     padding: 0;
+    align-items: center;
+  }
+
+  .container section > img {
+    margin-bottom: 1.5rem;
+  }
+
+  .container section p {
+    margin-top: -2rem;
+    font-size: 1.1rem;
+  }
+
+  .container section p span {
+    width: 100%;
+  }
+
+  .container section form input {
+    background: linear-gradient(to right, #4953B8, rgba(73,83,184, 20%));
+    border: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    height: 100%;
+    padding: 0 1.5rem;
+    width: 360px;
+  }
+}
+
+@media (max-width: 450px) {
+  .container section > img {
+    width: 250px;
+    margin-bottom: 1.5rem;
+  }
+
+  .container section p {
+    margin-top: 0;
+  }
+
+  .container section p span {
+    width: 200px;
+  }
+
+  .container section form input {
+    background: linear-gradient(to right, #4953B8, rgba(73,83,184, 20%));
+    border: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    height: 100%;
+    padding: 0 1.5rem;
+    width: 200px;
   }
 }

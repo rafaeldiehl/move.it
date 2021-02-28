@@ -23,7 +23,7 @@ export default function Login() {
         </header>
         <p>
           <img src="icons/github.svg" alt="Github"/>
-          Faça login com seu Github <br /> para começar
+          <span>Faça login com seu Github para começar</span>
         </p>
         <form>
           <input required type="text" placeholder="Digite seu username"/>
