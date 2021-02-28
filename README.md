@@ -41,7 +41,7 @@
 </div>
 
 <div id="layout">
-  <h2 align="center">🖼️ Layout</2>
+  <h2 align="center">🖼️ Layout</h2>
   
   <p align="center">
     <img src="./.github/layout_desktop1.png" width="45%" />
