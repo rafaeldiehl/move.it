@@ -154,4 +154,8 @@
 
 <p align="center">
   Feito com 💙 por <a href="https://github.com/rafaeldiehl">Rafael Diehl</a>
+<<<<<<< HEAD
 </p>
+=======
+</p>
+>>>>>>> 881ac1aea611add55f12d9b76c3b8dcad5e85292
