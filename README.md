@@ -1,34 +1,157 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center"><img src="./.github/logo.png" alt="Move.it" /></h1>
+  
+<p align="center">Move.it é um projeto em Next.js que foi desenvolvido durante a NLW #4 🚀</p>
 
-## Getting Started
+<p align="center">
 
-First, run the development server:
+  <a href="https://rocketseat.com.br/" target="_blank">
+    <img src="https://img.shields.io/static/v1?label=move-it&message=nlw-4&color=8257E5" target="_blank" alt="NLW #4">
+  </a>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+  <a href="https://github.com/rafaeldiehl" target="_blank">
+    <img src="https://img.shields.io/static/v1?label=author&message=rafaeldiehl&color=8257E5" alt="Github">
+  </a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  <img src="https://img.shields.io/static/v1?label=languages&message=1&color=8257E5" alt="Linguagens"> 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+  
+  <img src="https://img.shields.io/static/v1?label=status&message=unfinished&color=8257E5" alt="Em desenvolvimento">
+  
+</p>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<h3 align="center"><img src="./.github/demo.gif" /></h3>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Tabela de Contéudos
+<!--ts-->
+   * [Sobre](#sobre)
+   * [Layout](#layout)
+   * [Como usar](#como-usar)
+      * [Pré-requisitos](#pre-requisitos)
+      * [Instalando localmente](#instalacao)
+      * [Funcionamento](#funcionamento)
+   * [Tecnologias](#tecnologias)
+   * [Features](#features)
+<!--te-->
 
-## Learn More
+<hr />
+<div id="sobre">
+  <h2 align="center">📘 Sobre</h2>
 
-To learn more about Next.js, take a look at the following resources:
+  <p>Move.it é uma aplicação web baseada na  <a href="https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro">técnica <i>pomodoro</i></a>, que consiste num cronômetro que divide o tempo em períodos de 25 minutos, separados por pequenos intervalos. Além disso, o Move.it propõe a realização de desafios — divididos entre exercícios para o corpo e visão — para ajudar o usuário a manter uma rotina saudável, premiando-o com pontos de experiência, níveis e contabilizando o número de desafios completados. Foi desenvolvida durante o Next Level Week #4, um evento com duração de uma semana para programadores, promovido pela <a href="https://rocketseat.com.br">Rocketseat</a>.
+</div>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<div id="layout">
+  <h2 align="center">🖼️ Layout</h2>
+  
+  <p align="center">
+    <img src="./.github/layout_desktop1.png" width="45%" />
+    <img src="./.github/layout_desktop2.png" width="45%" />
+    <img src="./.github/layout_desktop3.png" width="45%" />
+    <img src="./.github/layout_desktop4.png" width="45%" />
+    <img src="./.github/layout_mobile1.png" width="26%" />
+    <img src="./.github/layout_mobile2.png" width="26%" />
+    <img src="./.github/layout_mobile3.png" width="26%" />
+  </p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+</div>
 
-## Deploy on Vercel
+<div id="como-usar">
+  
+  <h2 align="center">🔎 Como usar</h2>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  É possível visualizar o projeto em produção pela Vercel, <a href="https://move-it-rust-xi.vercel.app">clicando aqui</a>. Porém, caso você queira instalar o projeto diretamente em sua máquina, siga as instruções abaixo.
+  
+ <div id="pre-requisitos">
+  <h3>Pré-requisitos</h3>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  Para conseguir acessar o projeto localmente, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+  
+  - Node.js (obrigatório)
+  - Git (opcional)
+  - Yarn (opcional)
+
+  Além disto é bom ter um editor para trabalhar com o código, como o <a href="https://code.visualstudio.com">VSCode</a>.
+
+ </div>
+
+<div id="instalacao">
+  <h3>Instalando localmente</h3>
+
+  Primeiramente, clone o repositório usando git ou baixe-o como zip:
+  
+  ```bash
+  git clone https://github.com/rafaeldiehl/move.it.git
+  ```
+
+  Em seguida, acesse a pasta raiz do projeto:
+
+  ```bash
+  cd move.it
+  ## Caso tenha baixado como zip e já tenha descompactado
+  cd move.it-main
+  ```
+
+  Dentro da pasta raiz, instale as dependências:
+
+  ```bash
+  npm install
+  ## Caso esteja usando yarn
+  yarn install
+  ```
+
+  Com as dependências já instaladas, inicie o projeto:
+
+  ```bash
+  npm run dev
+  ## Caso esteja usando yarn
+  yarn dev
+  ```
+    
+ </div>
+ 
+ <div id="funcionamentor">
+  <h3>Funcionamento</h3>
+
+  Em construção...
+ </div>
+
+<div>
+
+<div id="tecnologias">
+
+  <h2 align="center">🛠 Tecnologias</h2>
+  As seguintes tecnologias foram usadas na construção do projeto:
+
+  - JavaScript
+  - TypeScript
+  - JSON
+  - Node.js
+  - React.js
+  - Next.js
+  - Styled Components 
+  
+</div>
+
+
+<div id="features">
+
+  <h2 align="center">📌 Features</h2>
+
+  Além do projeto criado com as aulas, estão/serão implementadas as seguintes features.
+  
+   - [x] Adição de ícones
+   - [x] Responsividade
+   - [x] Página de Login
+   - [ ] Página de Leaderboard
+   - [ ] Modo escuro
+   - [ ] Autenticação com Github
+   - [ ] Armazenamento dos dados dos usuários
+   - [ ] Compartilhar progresso no Twitter
+  
+</div>
+
+<hr />
+
+<p align="center">
+  Feito com 💙 por <a href="https://github.com/rafaeldiehl">Rafael Diehl</a>
+</p>
