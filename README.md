@@ -120,7 +120,9 @@
 <div id="tecnologias">
 
   <h2 align="center">🛠 Tecnologias</h2>
+
   As seguintes tecnologias foram usadas na construção do projeto:
+
 
   - JavaScript
   - TypeScript
@@ -154,8 +156,4 @@
 
 <p align="center">
   Feito com 💙 por <a href="https://github.com/rafaeldiehl">Rafael Diehl</a>
-<<<<<<< HEAD
 </p>
-=======
-</p>
->>>>>>> 881ac1aea611add55f12d9b76c3b8dcad5e85292

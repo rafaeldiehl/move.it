@@ -7,20 +7,6 @@ export default createGlobalStyle `
     box-sizing: border-box;
   }
 
-  :root {
-    --white: #fff;
-    --background: #f2f3f5;
-    --gray-line: #dcdde0;
-    --text: #666666;
-    --text-highlight: #b3b9ff;
-    --title: #2e384d;
-    --red: #e83f5b;
-    --green: #4cd62b;
-    --blue: #5965e0;
-    --blue-dark: #4953b8;
-    --blue-twitter: #2aa8e0;
-  }
-
   @media(max-width: 1000px) {
     html {
       font-size: 93.75%;
@@ -46,8 +32,8 @@ export default createGlobalStyle `
   }
 
   body {
-    background: var(--background);
-    color: var(--text);
+    background: ${props => props.theme.background};
+    color: ${props => props.theme.text};
   }
 
   body, input, textarea, button {

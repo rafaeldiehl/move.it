@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   height: 100%;
 
-  background: var(--white);
+  background: ${props => props.theme.white};
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   padding: 1.5rem 2rem;
@@ -71,11 +71,11 @@ export const ChallengeActive = styled.div`
   margin-bottom: 0.25rem;
 
   header {
-    color: var(--blue);
+    color: ${props => props.theme.blue};
     font-weight: 600;
     font-size: 1.25rem;
     padding: 0 2rem 1.5rem;
-    border-bottom: 1px solid var(--gray-line);
+    border-bottom: 1px solid ${props => props.theme.grayLine};
   }
 
   main {
@@ -88,7 +88,7 @@ export const ChallengeActive = styled.div`
     strong {
       font-size: 2rem;
       font-weight: 600;
-      color: var(--title);
+      color: ${props => props.theme.title};
       margin: 1.5rem 0 1rem;
     }
 
@@ -112,7 +112,7 @@ export const ChallengeActive = styled.div`
       border: 0;
       border-radius: 5px;
 
-      color: var(--white);
+      color: ${props => props.theme.white};
       font-size: 1rem;
       font-weight: 600;
 
@@ -134,7 +134,7 @@ export const ChallengeActive = styled.div`
 `;
 
 export const FailedButton = styled.button`
-  background: var(--red);
+  background:  ${props => props.theme.red};
 
   &:hover {
     background: #C5364D;
@@ -142,7 +142,7 @@ export const FailedButton = styled.button`
 `;
 
 export const SucceededButton = styled.button`
-  background: var(--green);
+  background:  ${props => props.theme.green};
 
   &:hover {
     background: #41B625;

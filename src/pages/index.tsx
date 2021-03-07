@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { ChallengeBox } from '../components/ChallengeBox';
 import { CompletedChallenges } from '../components/CompletedChallenges';
 import { Countdown } from '../components/Countdown';
@@ -17,40 +19,43 @@ interface HomeProps {
   level: number;
   currentExperience: number;
   challengesCompleted: number;
+  themeToggler(): void;
 }
 
 export default function Home(props: HomeProps) {  
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-    >
-      <S.Container>
-        <SideBar />
-        <S.Content>
-          <Head>
-            <title>Início | move.it</title>
-          </Head>
+    <>
+      <ChallengesProvider
+        level={props.level}
+        currentExperience={props.currentExperience}
+        challengesCompleted={props.challengesCompleted}
+      >
+        <S.Container>
+          <SideBar themeToggler={props.themeToggler}/>
+          <S.Content>
+            <Head>
+              <title>Início | move.it</title>
+            </Head>
 
-          <ExperienceBar />
+            <ExperienceBar />
 
-          <CountdownProvider>
-            <section>
-              <div>
-                <Profile />
-                <CompletedChallenges />
-                <Countdown />
-              </div>
-              <div>
-                <ChallengeBox />
-              </div>
-            </section>
-          </CountdownProvider>
-          
-        </S.Content>
-      </S.Container>
-    </ChallengesProvider>
+            <CountdownProvider>
+              <section>
+                <div>
+                  <Profile />
+                  <CompletedChallenges />
+                  <Countdown />
+                </div>
+                <div>
+                  <ChallengeBox />
+                </div>
+              </section>
+            </CountdownProvider>
+            
+          </S.Content>
+        </S.Container>
+      </ChallengesProvider>
+    </>
   );
 }
 

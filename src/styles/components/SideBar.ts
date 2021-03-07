@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: var(--white);
+  background:  ${props => props.theme.white};
   width: 7rem;
   display: flex;
   justify-content: center;
@@ -13,45 +13,52 @@ export const Container = styled.div`
     height: 100vh;
     justify-content: center;
     position: relative;
-  }
 
-  section header {
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 90%;
 
-  section header img {
-    width: 2.5rem;
-    cursor: pointer;
+      .buttons {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    header img {
+      width: 2.5rem;
+      cursor: pointer;
+    }
   }
 
   @media (max-width: 1000px) {
     position: fixed;
-    background: var(--white);
+    background:  ${props => props.theme.white};
     width: 100%;
     display: flex;
     justify-content: start;
 
     section {
       flex-direction: row;
-      height: 4rem;
+      height: 5rem;
       width: 100vw;
       align-items: center;
-      margin-top: 1rem;
       justify-content: center;
       margin-left: 0;
+      margin-top: 0.5rem;
 
-      header {
-        left: 2rem;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      div {
-        display: flex;
+      > div {
         flex-direction: row;
+        height: 100%;
+        width: 90%;
+
+        .buttons {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
   }
@@ -78,7 +85,7 @@ export const Link = styled.div`
     }
 
     > svg path {
-      stroke: var(--blue-dark);
+      stroke:  ${props => props.theme.blueDark};
     }
   }
 
@@ -113,7 +120,7 @@ export const ActiveLink = styled.div`
     width: 0.3rem;
     height: 3.75rem;
     border-radius: 0 15px 15px 0;
-    background: var(--blue-dark);
+    background:  ${props => props.theme.blueDark};
     position: absolute;
     left: 0;
   }
@@ -124,7 +131,7 @@ export const ActiveLink = styled.div`
     }
 
     path {
-      stroke: var(--blue-dark);
+      stroke:  ${props => props.theme.blueDark};
     }
   }
 
@@ -141,10 +148,10 @@ export const ActiveLink = styled.div`
       height: 0.3rem;
       width: 5rem;
       border-radius: 0 15px 15px 0;
-      background: var(--blue-dark);
+      background:  ${props => props.theme.blueDark};
       position: absolute;
       left: auto;
-      bottom: 0;
+      bottom: -0.5rem;
     }
   }
 `;

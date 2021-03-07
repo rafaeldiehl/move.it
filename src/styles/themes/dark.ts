@@ -1,0 +1,15 @@
+export const darkTheme = {
+  theme: 'dark',
+  white: '#25262C',
+  background: '#1B1C22',
+  grayLine: '#7D7D82',
+  text: '#7D7D82',
+  textHighlight: '#b3b9ff',
+  title: '#ffffff',
+  red: '#e83f5b',
+  green: '#4cd62b',
+  blue: '#5965e0',
+  blueDark: '#4953b8',
+  blueTwitter: '#2aa8e0',
+  overlayBackground: 'rgba(15, 15, 18, 0.8)',
+};

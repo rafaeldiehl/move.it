@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: var(--blue);
+  background-color:  ${props => props.theme.blue};
   background-image: url('/icons/symbol.svg');
   background-repeat: no-repeat;
   background-size: 45%;
@@ -25,14 +25,14 @@ export const Container = styled.div`
 
     strong {
       font-size: 2.25rem;
-      color: var(--white);
+      color: #ffffff;
       font-weight: 500;
       text-align: left;
     }
 
     p {
       font-size: 1.25rem;
-      color: var(--text-highlight);
+      color:  ${props => props.theme.textHighlight};
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -55,18 +55,18 @@ export const Container = styled.div`
       input {
         background: linear-gradient(to right, #4953B8, rgba(73,83,184, 20%));
         border: none;
-        color: var(--white);
+        color:  ${props => props.theme.white};
         font-size: 1.25rem;
         height: 100%;
         padding: 0 1.5rem;
 
         &::placeholder {
-          color: var(--text-highlight);
+          color:  ${props => props.theme.textHighlight};
         }
 
         &:valid {
           ~ button {
-            background: var(--green);
+            background:  ${props => props.theme.green};
           }
         }
       }
@@ -76,7 +76,7 @@ export const Container = styled.div`
         border: none;
         font-size: 0px;
         width: 4.75rem;
-        background: var(--blue-dark);
+        background:  ${props => props.theme.blueDark};
         transition: background .2s;
       }
     }
@@ -108,7 +108,7 @@ export const Container = styled.div`
         input {
           background: linear-gradient(to right, #4953B8, rgba(73,83,184, 20%));
           border: none;
-          color: var(--white);
+          color:  ${props => props.theme.white};
           font-size: 1.1rem;
           height: 100%;
           padding: 0 1.5rem;
@@ -137,7 +137,7 @@ export const Container = styled.div`
         input {
           background: linear-gradient(to right, #4953B8, rgba(73,83,184, 20%));
           border: none;
-          color: var(--white);
+          color:  ${props => props.theme.white};
           font-size: 1.1rem;
           height: 100%;
           padding: 0 1.5rem;

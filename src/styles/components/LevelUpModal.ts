@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Overlay = styled.div`
-  background: rgba(242, 243, 245, 0.8);
+  background: ${props => props.theme.overlayBackground};
   position: fixed;
   top: 0;
   bottom: 0;
@@ -14,7 +14,7 @@ export const Overlay = styled.div`
 `;
 
 export const Container = styled.div`
-  background: var(--white);
+  background:  ${props => props.theme.white};
   width: 100%;
   max-width: 400px;
   padding: 2rem 3rem;
@@ -26,19 +26,19 @@ export const Container = styled.div`
   header {
     font-size: 8.75rem;
     font-weight: 600;
-    color: var(--blue);
+    color:  ${props => props.theme.blue};
     background: url('/icons/levelup.svg') no-repeat center;
     background-size: contain;
   }
 
   strong {
     font-size: 2.25rem;
-    color: var(--title);
+    color:  ${props => props.theme.title};
   }
 
   p {
     font-size: 1.25rem;
-    color: var(--text);
+    color:  ${props => props.theme.text};
   }
 
   button {

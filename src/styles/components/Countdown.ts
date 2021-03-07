@@ -5,7 +5,7 @@ export const Container = styled.div`
     align-items: center;
     font-family: Rajdhani;
     font-weight: 600;
-    color: var(--title);
+    color:  ${props => props.theme.title};
 
   > div {
     flex: 1;
@@ -14,7 +14,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-evenly;
 
-    background: var(--white);
+    background:  ${props => props.theme.white};
     box-shadow: 0 0 60px rbga(0, 0, 0, 0.05);
     border-radius: 5px;
     font-size: 8.5rem;
@@ -24,11 +24,11 @@ export const Container = styled.div`
       flex: 1;
 
       &:first-child {
-        border-right: 1px solid #f0f1f3;
+        border-right: 1px solid ${props => props.theme.background};
       }
 
       &:last-child {
-        border-right: 1px solid #f0f1f3;
+        border-right: 1px solid ${props => props.theme.background};
       }
     }
   }
@@ -52,8 +52,8 @@ export const CountdownButton = styled.button`
     border: 0;
     border-radius: 5px;
 
-    background: var(--blue);
-    color: var(--white);
+    background:  ${props => props.theme.blue};
+    color: #ffffff;
 
     font-size: 1.25rem;
     font-weight: 600;
@@ -65,14 +65,14 @@ export const CountdownButton = styled.button`
   }
 
   &:not(:disabled):hover {
-    background: var(--blue-dark);
+    background:  ${props => props.theme.blueDark};
   }
 
   &:disabled {
-    background: var(--white);
-    color: var(--text);
+    background: ${props => props.theme.white};
+    color:  ${props => props.theme.text};
     cursor: not-allowed;
-    border-bottom: 4px solid var(--green);
+    border-bottom: 4px solid  ${props => props.theme.green};
 
     > img {
       margin-left: 1rem;
@@ -93,8 +93,8 @@ export const CountdownButtonActive = styled.button`
   border: 0;
   border-radius: 5px;
 
-  background: var(--white);
-  color: var(--text);
+  background:  ${props => props.theme.white};
+  color:  ${props => props.theme.text};
 
   font-size: 1.25rem;
   font-weight: 600;
@@ -106,8 +106,8 @@ export const CountdownButtonActive = styled.button`
   }
 
   &:not(:disabled):hover {
-    background: var(--red);
-    color: var(--white);
+    background:  ${props => props.theme.red};
+    color: #ffffff;
   }
 
   &:hover > img {
