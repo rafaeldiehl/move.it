@@ -112,7 +112,7 @@ export const ChallengeActive = styled.div`
       border: 0;
       border-radius: 5px;
 
-      color: ${props => props.theme.white};
+      color: #ffffff;
       font-size: 1rem;
       font-weight: 600;
 

@@ -51,6 +51,8 @@
     <img src="./.github/layout_mobile1.png" width="26%" />
     <img src="./.github/layout_mobile2.png" width="26%" />
     <img src="./.github/layout_mobile3.png" width="26%" />
+    <img src="./.github/dark_theme1.png" width="45%" />
+    <img src="./.github/dark_theme2.png" width="45%" />
   </p>
 
 </div>
