@@ -114,7 +114,7 @@
  <div id="funcionamentor">
   <h3>Funcionamento</h3>
 
-  Em construção...
+  Basta clicar no botão "Iniciar um ciclo" para começar. Ao término do ciclo, você receberá um desafio. Completando desafios você pode subir de nível e acumular os desafios completos.
  </div>
 
 <div>
